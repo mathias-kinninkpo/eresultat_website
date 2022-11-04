@@ -1,0 +1,553 @@
+/* the general decoration  */
+
+body{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul, li{
+    list-style: none;
+}
+
+/* ***********--------------------------------------logo----------------------------------********** */
+
+
+figure{
+    width: 12%;
+    height: 12vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #666;
+
+}
+figure div{
+    width: 10%;
+    height: 100%;
+    position: relative;
+}
+figure ul{
+    width: 90%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    border: 1px solid black;
+}
+figure ul li{
+    display: inline-block;
+    width: 120%;
+    /* flex: 1; */
+    display: flex;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    border: 1px solid darkred;
+}
+figure ul li:first-child{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 29px;
+
+}
+figure ul li:nth-child(2){
+    width: 120%;
+}
+figure ul li:last-child{
+    font-size: 7px;
+    text-transform: uppercase;
+    padding: 2px;
+}
+figure ul li:nth-child(2) span:first-child{
+    display: inline-block;
+    width: 31%;
+    height: 5px;
+    position: relative;
+    background-color: green;
+}
+figure ul li:nth-child(2) span:nth-child(2){
+    display: inline-block;
+    width: 31%;
+    height: 5px;
+    position: relative;
+    background-color: yellow;
+}
+figure ul li:nth-child(2) span:last-child{
+    display: inline-block;
+    width: 31%;
+    height: 5px;
+    position: relative;
+    background-color: red;
+}
+
+
+
+
+/* ****************--------------------nav----------------------------****************************** */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-content: center;
+    background-color: rgb(48, 48, 119);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 5px 5px #555;
+    /* position: relative; */
+}
+nav ul:first-child{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    top: -10px;
+    left: -12%;
+
+}
+
+nav  ul:last-child{
+    width: 60%; 
+    height: 100%;
+    position: relative;
+    left: 7%;
+    top: -15px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav  ul li a{
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav  ul li a:hover{
+    color: orange;
+}
+nav  ul li{
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+.exam,.exam0{
+    background-color:rgb(48, 48, 119) ;
+    padding: 5px;
+    width:200px;
+    position:  absolute;
+    display: none;
+    top: 25px;
+    height: auto;
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out, transform ease-in-out;
+    /* transform: translateY(-20px); */
+}
+/* .exam1:focus + .exam, .exam2:focus + .exam0{
+    display: inline-block;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition: all 500ms ease ;
+} */
+
+.exam0 a, .exam a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    line-height: 50px;
+}
+.exam2:hover~.exam0{
+    display: block;
+    top: 50px;
+    transition: all 500ms ease;
+}
+
+.exam1:hover~.exam{
+
+    top: 50px;
+    display: block;
+    transition: all 500ms ease;
+}
+
+/* ----------------------------------image d'accueil---------------------------------- */
+
+
+.image_accueil{
+    width: 100%;
+    height: 67vh;
+    background-image: url("eresultat/eres0.6b045dcd.jpg");
+    background-size: cover;
+}
+.image_accueil .welcome_message{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    top: 60%;
+    background-color:rgba(0, 0, 255,0.2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image_accueil .welcome_message h1{
+    font-size: 12mm;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: Gotham Pro Bold,Montserrat,sans-serif;
+    border-right: 3px solid #f2f2f2;
+    animation: animate 8s infinite steps(38),blinck 0.25s infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+@keyframes animate{
+    from{
+        width: 0px;
+        transform: scale(.3);
+    }
+    60%{
+        width: 1172px;
+        transform: scale(1);
+    }
+    to{
+        width: 1172px;
+        transform: scale(.6);
+    }
+}
+@keyframes blinck {
+    from{
+        border-color: transparent;
+    }
+    to{
+        border-color: #f2f2f2;
+    }
+}
+.image_accueil .welcome_message p:last-child{
+    font-size: 6mm;
+    font-weight: bolder;
+    opacity: 1;
+}
+
+/* -----------------------------les textes ded ma page d'accueil---------------------- */
+
+.accueil_option > div{
+    width: 80%;
+    position: relative;
+    left: 7%;
+}
+.accueil_option > div >h1{
+    display: inline-block;
+    width: 45%;
+    position: relative;
+    font-size: 35px;
+
+}
+.text_accueil{
+    width: 100%;
+    padding: 3vh 0vh;
+    /* height: 43vh; */
+    position: relative;
+    margin: auto;
+}
+
+section div span:last-child{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 15px;
+    color: #008000;
+    margin: 0px 60px 0px 0px;
+}
+.text_accueil{
+    width: 90%;
+    height: 65vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(176, 176, 231); 
+    /* margin: 15px 0px; */
+    
+}
+.text_accueil figcaption{
+    width: 27%;
+    height: 10.5vh;
+    position: relative;
+    margin: 0px 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0px 0px 9px #999;
+    
+}
+
+.text_accueil figcaption:nth-child(4){
+    height: 19vh;
+}
+.text_accueil figcaption:nth-child(5){
+    height: 19vh;
+}
+.text_accueil figcaption:nth-child(6){
+    height: 19vh;
+
+}
+.text_accueil figcaption span{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #008000;
+    color: white;
+    border-radius: 50%; 
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px; 
+}
+.text_accueil figcaption ul{
+    width: 75%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    top: -20px;
+    /* border: 1px solid red; */
+}
+.text_accueil figcaption:nth-child(1) span{
+    background-color: rgb(180, 0, 0);
+}
+.text_accueil figcaption:nth-child(2) span{
+    background-color: rgb(175, 93, 196);
+}
+.text_accueil figcaption:nth-child(3) span{
+    background-color: rgb(89, 67, 95);
+}
+.text_accueil figcaption:nth-child(5) span{
+    background-color: rgb(90, 53, 99);
+}
+.text_accueil figcaption:nth-child(6) span{
+    background-color: rgb(178, 211, 241);
+}
+.text_accueil figcaption:nth-child(7) span{
+    background-color: rgb(180,0,0);
+}
+.text_accueil figcaption:nth-child(8) span{
+    background-color: rgb(180,0,0);
+}
+.text_accueil figcaption:hover{
+    box-shadow: 0px 0px 20px #999;
+    transition-property: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+.text_accueil figcaption ul > li{
+    font-size: 18px;
+    margin: 10px 0px;
+    /* border: 1px solid black; */
+}
+.text_accueil figcaption ul li:last-child{
+    font-size: 4.5mm;
+    font-style: italic;
+    color: rgb(92, 87, 87);
+}
+
+/* .intermediate{
+    height: 4vh;
+} */
+/*------------------------------------- the exams  witch are not disponible(-------------------------------------- */
+._disponible{
+    width: 100%;
+    /* height: 43vh; */
+    position: relative;
+    margin: auto;
+    padding: 3vh 0vh;
+}
+
+section div span:last-child{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 15px;
+    color: #008000;
+    margin: 0px 60px 0px 0px;
+}
+._disponible{
+    width: 90%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid black;  */
+    /* margin: 15px 0px; */
+    
+}
+._disponible figcaption{
+    width: 27%;
+    height: 10.5vh;
+    position: relative;
+    margin: 0px 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0px 0px 9px #999;
+    
+}
+
+._disponible figcaption span{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #008000;
+    color: white;
+    border-radius: 50%; 
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px; 
+}
+._disponible figcaption ul{
+    width: 75%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    top: -20px;
+    /* border: 1px solid red; */
+}
+
+._disponible figcaption ul li{
+    position: relative;
+    top: -40px;
+}
+._disponible figcaption ul li:first-child{
+    font-size: 2.7mm;
+    background-color: rgb(117, 148, 177);
+    color: white;
+    height: 17px;
+    width: 110px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: -25px;
+    left: 270px;
+    padding: 4px 2px;
+    border-radius:8px 0px 8px 0px ;
+}
+
+._disponible figcaption:nth-child(1) span{
+    background-color: green;
+}
+._disponible figcaption:nth-child(2) span{
+    background-color: orange;
+}
+._disponible figcaption:nth-child(3) span{
+    background-color: rgb(96, 26, 117);
+}
+._disponible figcaption:nth-child(4) span{
+    background-color: orange;
+}
+._disponible figcaption:nth-child(5) span{
+    background-color: orange;
+}
+._disponible figcaption:nth-child(6) span{
+    background-color: rgb(181, 95, 207);
+}
+._disponible figcaption:nth-child(7) span{
+    background-color: orange;
+}
+._disponible figcaption:nth-child(8) span{
+    background-color: green;
+}
+._disponible figcaption:hover{
+    box-shadow: 0px 0px 20px #999;
+    transition-property: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+    pointer-events: pointer;
+}
+._disponible figcaption ul > li{
+    font-size: 18px;
+    margin: 10px 0px;
+    /* border: 1px solid black; */
+}
+._disponible figcaption ul li:last-child{
+    font-size: 4.5mm;
+    font-style: italic;
+    color: rgb(92, 87, 87);
+}
+
+
+
+
+
+/* --------------------------------------the footer decoration------------------------------------  */
+footer{
+    background-color: rgb(54, 51, 51);
+    color: white;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+footer figcaption{
+    width: 100%;
+    height: 21vh;
+    position: relative;
+    background-color: rgb(54, 51, 51);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer figcaption div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer figcaption div p:first-child{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+footer figcaption div p a{
+    color: white;
+    font-size: 13px;
+}
+footer > div{
+    font-size: 3.5mm;
+}
+footer figcaption div p a:hover{
+    text-decoration: underline;
+}
